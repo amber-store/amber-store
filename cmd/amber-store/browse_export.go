@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
+	"github.com/amber-store/amber-store/key"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/key"
 )
 
 // exportCmd streams a directory tar or a file's raw bytes to path. It refuses to

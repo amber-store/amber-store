@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/userconfig"
+	"github.com/amber-store/amber-store/userconfig"
 )
 
 func TestLoadMissingIsErrNotConfigured(t *testing.T) {

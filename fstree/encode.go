@@ -3,8 +3,8 @@ package fstree
 import (
 	"fmt"
 
-	"github.com/draganm/amber-store/cborx"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/cborx"
+	"github.com/amber-store/amber-store/key"
 	"github.com/fxamacker/cbor/v2"
 )
 

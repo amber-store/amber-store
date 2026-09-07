@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"github.com/urfave/cli/v2"
 )
 

@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // incompressible returns n deterministic pseudo-random bytes (zstd cannot shrink them).

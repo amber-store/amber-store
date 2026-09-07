@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/remotesync"
 	"github.com/urfave/cli/v2"
 )
 

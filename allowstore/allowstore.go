@@ -15,8 +15,8 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/amber-store/amber-store/allowlist"
 	"github.com/cockroachdb/pebble/v2"
-	"github.com/draganm/amber-store/allowlist"
 	"golang.org/x/crypto/ssh"
 )
 

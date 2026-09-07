@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
+	"github.com/amber-store/amber-store/client"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
 )
 
 func TestModel_RefPickerFilterAndSelect(t *testing.T) {

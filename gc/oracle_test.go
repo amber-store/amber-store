@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // TestOracle drives random reference churn and cycles against an

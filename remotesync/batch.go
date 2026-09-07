@@ -7,8 +7,8 @@
 package remotesync
 
 import (
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/packstore"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
 )
 
 // DefaultBatchBytes is the default per-batch payload target, measured in stored

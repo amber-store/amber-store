@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // ListEntries returns up to limit entries of the directory object dir whose

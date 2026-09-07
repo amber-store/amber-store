@@ -62,8 +62,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // mkObj builds a canonical Blob object from data (Blob length == byte length).
@@ -207,8 +207,8 @@ import (
 	"io"
 	"iter"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // magic identifies the format and its version (the trailing byte).
@@ -431,7 +431,7 @@ func TestWriteParallel_VerifyAcceptsHonestObjects(t *testing.T) {
 }
 ```
 
-Add `"github.com/draganm/amber-store/key"` to the test file's imports (for `key.Size`).
+Add `"github.com/amber-store/amber-store/key"` to the test file's imports (for `key.Size`).
 
 - [ ] **Step 2: Update the 3 existing `WriteParallel` call sites** in `diskstore/parallel_test.go`
 
@@ -451,7 +451,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -667,10 +667,10 @@ import (
 	"io"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/tarexport"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/tarexport"
 )
 
 // buildStore ingests three blobs + a single-leaf directory referencing two
@@ -771,9 +771,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/cborx"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/cborx"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -1016,7 +1016,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/tarextract"
+	"github.com/amber-store/amber-store/tarextract"
 )
 
 func TestExtract_FilesDirsAndDeferredDirMeta(t *testing.T) {
@@ -1437,7 +1437,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // Stats mirrors the daemon's POST /v1/objects response.
@@ -1551,12 +1551,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // serveOnSocket starts the daemon handler on a fresh unix socket under a temp
@@ -1662,9 +1662,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/tarexport"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/tarexport"
 )
 
 type handler struct {
@@ -1835,7 +1835,7 @@ Expected: FAIL — `501 Not Implemented` surfaced as a client error / wrong stat
 
 - [ ] **Step 3: Replace `getTar` in `daemon/daemon.go`**
 
-Add imports `"encoding/hex"`, `"github.com/draganm/amber-store/key"`, `"github.com/draganm/amber-store/tarexport"` (remove the placeholder `_ = tarexport.Write` line), then:
+Add imports `"encoding/hex"`, `"github.com/amber-store/amber-store/key"`, `"github.com/amber-store/amber-store/tarexport"` (remove the placeholder `_ = tarexport.Write` line), then:
 
 ```go
 // getTar streams a PAX tar of the directory tree rooted at the {key} path value.
@@ -1912,9 +1912,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/amberpack"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/amberpack"
 	"bytes"
 )
 
@@ -2003,9 +2003,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/socketpath"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/socketpath"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2318,7 +2318,7 @@ func runIngest(c *cli.Context, cfg *ingestConfig) error {
 }
 ```
 
-Update `ingest.go`'s imports: add `io`, `github.com/draganm/amber-store/amberpack`, `github.com/draganm/amber-store/client`, `github.com/draganm/amber-store/internal/socketpath`; keep `context`, `errors`, `fmt`, `iter`, `os`, `path/filepath`, `sync`, `time`, `runtime`, `chunkers`, `fstree`, `key`, `cli`. Remove `diskstore` if unused.
+Update `ingest.go`'s imports: add `io`, `github.com/amber-store/amber-store/amberpack`, `github.com/amber-store/amber-store/client`, `github.com/amber-store/amber-store/internal/socketpath`; keep `context`, `errors`, `fmt`, `iter`, `os`, `path/filepath`, `sync`, `time`, `runtime`, `chunkers`, `fstree`, `key`, `cli`. Remove `diskstore` if unused.
 
 - [ ] **Step 3: Rewrite the parity + CLI tests in `ingest_test.go`**
 
@@ -2337,10 +2337,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // collectSequential builds the tree at dir with the sequential driver and returns
@@ -2625,8 +2625,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/internal/socketpath"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/internal/socketpath"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2682,9 +2682,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/internal/socketpath"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/internal/socketpath"
+	"github.com/amber-store/amber-store/key"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2792,9 +2792,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/internal/socketpath"
-	"github.com/draganm/amber-store/tarextract"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/internal/socketpath"
+	"github.com/amber-store/amber-store/tarextract"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2941,7 +2941,7 @@ func TestRunRestore_RequiresTwoArgs(t *testing.T) {
 }
 ```
 
-Update `restore_test.go` imports: it now needs `bytes`, `encoding/hex`, `os`, `path/filepath`, `strings`, `testing`, `time`, `golang.org/x/sys/unix`, `github.com/draganm/amber-store/key`. Drop `chunkers`, `diskstore` (no longer used here). `TestRunRestore_RejectsBadKey` must run before the key is parsed, so it does not need a daemon — `parseHexKey` fails first.
+Update `restore_test.go` imports: it now needs `bytes`, `encoding/hex`, `os`, `path/filepath`, `strings`, `testing`, `time`, `golang.org/x/sys/unix`, `github.com/amber-store/amber-store/key`. Drop `chunkers`, `diskstore` (no longer used here). `TestRunRestore_RejectsBadKey` must run before the key is parsed, so it does not need a daemon — `parseHexKey` fails first.
 
 - [ ] **Step 4: Build and run tests**
 
@@ -3024,8 +3024,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/fstree"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/fstree"
 )
 
 func TestBuildDir_FailFastOnUnreadableFile(t *testing.T) {

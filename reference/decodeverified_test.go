@@ -5,9 +5,9 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/sshsign"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/sshsign"
 	"golang.org/x/crypto/ssh"
 )
 

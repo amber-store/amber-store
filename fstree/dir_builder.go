@@ -1,8 +1,8 @@
 package fstree
 
 import (
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/key"
 )
 
 // DirBuilder builds one directory's prolly tree by streaming its entries (which

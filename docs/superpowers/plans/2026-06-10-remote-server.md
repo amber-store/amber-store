@@ -147,9 +147,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/keylist"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/keylist"
+	"github.com/amber-store/amber-store/key"
 )
 
 func testKeys(t *testing.T) []key.Key {
@@ -227,7 +227,7 @@ package keylist
 import (
 	"fmt"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // Flatten concatenates keys in order.
@@ -289,7 +289,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/internal/httpsig"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -439,7 +439,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/draganm/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/internal/sshsign"
 	"github.com/fxamacker/cbor/v2"
 	"github.com/zeebo/blake3"
 	"golang.org/x/crypto/ssh"
@@ -652,7 +652,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/allowlist"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -820,7 +820,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/internal/nonces"
+	"github.com/amber-store/amber-store/internal/nonces"
 )
 
 func TestReplayDetection(t *testing.T) {
@@ -929,8 +929,8 @@ package fstree_test
 import (
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestChildKeysBlobHasNone(t *testing.T) {
@@ -1001,7 +1001,7 @@ package fstree
 import (
 	"fmt"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // ChildKeys returns the keys directly referenced by the object with key k
@@ -1118,7 +1118,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/internal/remotes"
+	"github.com/amber-store/amber-store/internal/remotes"
 )
 
 func open(t *testing.T, path string) *remotes.Registry {
@@ -1411,11 +1411,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/internal/httpsig"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -1635,7 +1635,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/draganm/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/internal/httpsig"
 )
 
 // signAndWrite signs {nonce, status, blake3(body)} with the server identity
@@ -1682,11 +1682,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/internal/httpsig"
-	"github.com/draganm/amber-store/internal/nonces"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/internal/nonces"
+	"github.com/amber-store/amber-store/refstore"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -1884,9 +1884,9 @@ package server_test
 import (
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/keylist"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/keylist"
+	"github.com/amber-store/amber-store/key"
 )
 
 // storeBlobs writes blobs into ts.store and returns their objects.
@@ -1945,7 +1945,7 @@ package server
 import (
 	"net/http"
 
-	"github.com/draganm/amber-store/internal/keylist"
+	"github.com/amber-store/amber-store/internal/keylist"
 )
 
 // postMissing answers the have/want negotiation: of the keys in the request
@@ -2065,7 +2065,7 @@ func TestObjectUploadRejectsHashMismatch(t *testing.T) {
 }
 ```
 
-(Add `bytes`, `encoding/json` and `github.com/draganm/amber-store/amberpack` to the test imports.)
+(Add `bytes`, `encoding/json` and `github.com/amber-store/amber-store/amberpack` to the test imports.)
 
 - [ ] **Step 2: Run it, expect FAIL** — stub returns 501.
 
@@ -2119,7 +2119,7 @@ func (h *handler) postObjects(w http.ResponseWriter, r *http.Request, a *authedR
 }
 ```
 
-(Add `bytes`, `encoding/json`, `errors`, `github.com/draganm/amber-store/amberpack`, `github.com/draganm/amber-store/diskstore` to `server/objects.go` imports.)
+(Add `bytes`, `encoding/json`, `errors`, `github.com/amber-store/amber-store/amberpack`, `github.com/amber-store/amber-store/diskstore` to `server/objects.go` imports.)
 
 - [ ] **Step 4: Run, expect PASS** — `go test ./server/ -v`.
 
@@ -2202,7 +2202,7 @@ func TestObjectsGetAbsentKeyIs404BeforeStreaming(t *testing.T) {
 }
 ```
 
-(Add `strings`, `time`, `io`, `net/http`, `github.com/draganm/amber-store/internal/httpsig` to the test imports as needed.)
+(Add `strings`, `time`, `io`, `net/http`, `github.com/amber-store/amber-store/internal/httpsig` to the test imports as needed.)
 
 - [ ] **Step 2: Run it, expect FAIL** — stub returns 501.
 
@@ -2265,7 +2265,7 @@ func (h *handler) postObjectsGet(w http.ResponseWriter, r *http.Request, a *auth
 }
 ```
 
-(Add `strings`, `io`, `github.com/draganm/amber-store/fstree`, `github.com/draganm/amber-store/internal/httpsig`, `github.com/zeebo/blake3` to imports. `http.TrailerPrefix` lets the handler set the trailer after the body without pre-declaring it.)
+(Add `strings`, `io`, `github.com/amber-store/amber-store/fstree`, `github.com/amber-store/amber-store/internal/httpsig`, `github.com/zeebo/blake3` to imports. `http.TrailerPrefix` lets the handler set the trailer after the body without pre-declaring it.)
 
 - [ ] **Step 4: Run, expect PASS** — `go test ./server/ -v`.
 
@@ -2295,9 +2295,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/reference"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -2457,10 +2457,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 // refName extracts and validates the ?name= query parameter.
@@ -2679,11 +2679,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/remoteclient"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -2823,7 +2823,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/draganm/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/internal/httpsig"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -2977,7 +2977,7 @@ func (c *Client) Missing(ctx context.Context, keys []key.Key) ([]key.Key, error)
 }
 ```
 
-(Imports: `github.com/draganm/amber-store/internal/keylist`, `github.com/draganm/amber-store/key`.)
+(Imports: `github.com/amber-store/amber-store/internal/keylist`, `github.com/amber-store/amber-store/key`.)
 
 - [ ] **Step 4: Run, expect PASS** — `go test ./remoteclient/ -v`.
 
@@ -3008,9 +3008,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remoteclient"
 )
 
 func blobs(t *testing.T, contents ...string) []fstree.Object {
@@ -3103,9 +3103,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -3186,11 +3186,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/httpsig"
-	"github.com/draganm/amber-store/internal/keylist"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/httpsig"
+	"github.com/amber-store/amber-store/internal/keylist"
+	"github.com/amber-store/amber-store/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -3382,10 +3382,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remotesync"
 )
 
 func TestBatchesBalanceByBytes(t *testing.T) {
@@ -3465,8 +3465,8 @@ func TestPushSizerUsesActualSizeForNodes(t *testing.T) {
 package remotesync
 
 import (
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/key"
 )
 
 // DefaultBatchBytes is the default per-batch payload target.
@@ -3600,8 +3600,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/remotesync"
 )
 
 func TestPushTransfersAllReachableObjects(t *testing.T) {
@@ -3687,10 +3687,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -3811,8 +3811,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/remotesync"
 )
 
 func TestPullFetchesWholeTree(t *testing.T) {
@@ -3920,10 +3920,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -4063,12 +4063,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/internal/remotes"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/remotes"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -4321,7 +4321,7 @@ func NewWithRemotes(store *diskstore.Store, refs *refstore.Store, logger *slog.L
 }
 ```
 
-(The four sync routes get stubs returning 501 in this task; Task 19 fills them. Add imports `errors`, `github.com/draganm/amber-store/internal/remotes`, `golang.org/x/crypto/ssh` where needed.)
+(The four sync routes get stubs returning 501 in this task; Task 19 fills them. Add imports `errors`, `github.com/amber-store/amber-store/internal/remotes`, `golang.org/x/crypto/ssh` where needed.)
 
 Create `daemon/remotes.go`:
 
@@ -4334,8 +4334,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/draganm/amber-store/internal/remotes"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/internal/remotes"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -4531,10 +4531,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/reference"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -4693,13 +4693,13 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/draganm/amber-store/internal/remotes"
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/remoteclient"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/internal/remotes"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/remotesync"
 )
 
 // remoteFor resolves the ?remote= query (empty selects the sole remote) into
@@ -5463,11 +5463,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/internal/sshsign"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/server"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/crypto/ssh"
 )
@@ -5796,7 +5796,7 @@ Wire into `runDaemon`, replacing the `daemon.New(...)` call:
 	}
 ```
 
-(Add imports: `strings`, `github.com/draganm/amber-store/internal/remotes`, `golang.org/x/crypto/ssh`. The remotes registry is always opened — `remote add` must work even before any `--remote-key` is configured; sync commands fail later with the no-key message.)
+(Add imports: `strings`, `github.com/amber-store/amber-store/internal/remotes`, `golang.org/x/crypto/ssh`. The remotes registry is always opened — `remote add` must work even before any `--remote-key` is configured; sync commands fail later with the no-key message.)
 
 - [ ] **Step 4: Run, expect PASS** — `go test ./cmd/amber-store/ -run TestParseRemoteKeys -v`, then the whole package: `go test ./cmd/amber-store/`.
 
@@ -5833,10 +5833,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/internal/allowlist"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -6005,8 +6005,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/internal/socketpath"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/internal/socketpath"
 	"github.com/urfave/cli/v2"
 )
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/amber-store/amber-store/client"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
 )
 
 // newRefPickerModel builds a model that opens on a searchable reference list

@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // mapGetter serves objects from an in-memory map.

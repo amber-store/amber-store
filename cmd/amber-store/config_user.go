@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/draganm/amber-store/sshsign"
-	"github.com/draganm/amber-store/userconfig"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/amber-store/userconfig"
 	"github.com/urfave/cli/v2"
 )
 

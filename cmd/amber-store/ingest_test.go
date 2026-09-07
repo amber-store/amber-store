@@ -13,11 +13,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/amberignore"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberignore"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // collectSequential builds the tree at dir with the sequential driver and returns

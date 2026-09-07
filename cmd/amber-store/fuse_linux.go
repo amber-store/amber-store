@@ -16,8 +16,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 	"github.com/hanwen/go-fuse/v2/fs"
 	"github.com/hanwen/go-fuse/v2/fuse"
 	"github.com/urfave/cli/v2"

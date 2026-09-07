@@ -13,12 +13,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/draganm/amber-store/amberignore"
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/userconfig"
+	"github.com/amber-store/amber-store/amberignore"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/userconfig"
 	"github.com/urfave/cli/v2"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/draganm/amber-store/tarextract"
+	"github.com/amber-store/amber-store/tarextract"
 	"github.com/urfave/cli/v2"
 )
 

@@ -13,8 +13,8 @@ import (
 	"testing"
 
 	"github.com/FastFilter/xorfilter"
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/key"
 )
 
 // testEntries builds n index entries with distinct keys and synthetic offsets.

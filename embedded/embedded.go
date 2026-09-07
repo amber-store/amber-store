@@ -16,14 +16,14 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/draganm/amber-store/identity"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/remoteclient"
-	"github.com/draganm/amber-store/remotes"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/identity"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/remotes"
+	"github.com/amber-store/amber-store/remotesync"
 	"golang.org/x/crypto/ssh"
 )
 

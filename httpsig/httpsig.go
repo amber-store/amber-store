@@ -19,7 +19,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/draganm/amber-store/sshsign"
+	"github.com/amber-store/amber-store/sshsign"
 	"github.com/fxamacker/cbor/v2"
 	"github.com/zeebo/blake3"
 	"golang.org/x/crypto/ssh"

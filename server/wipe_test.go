@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/grant"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/grant"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 func TestWipeClearsObjectsAndRefsAndKeepsServing(t *testing.T) {

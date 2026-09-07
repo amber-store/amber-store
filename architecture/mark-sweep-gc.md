@@ -1,7 +1,7 @@
 # Mark-and-Sweep Garbage Collection
 
 A port of Mic92's bitmap GC from
-[draganm/amber-store#9](https://github.com/draganm/amber-store/pull/9).
+[amber-store/amber-store#9](https://github.com/amber-store/amber-store/pull/9).
 It supersedes the [simple-gc](simple-gc.md) design (per-root closure
 files, an in-RAM union of tails, refcount bookkeeping on every reference
 write), which was built first and then replaced by this collector in the

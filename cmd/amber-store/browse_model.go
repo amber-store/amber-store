@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 

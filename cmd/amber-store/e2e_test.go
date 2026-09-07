@@ -14,12 +14,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/gc"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 // TestEndToEnd_IngestStreamThenRestore runs the full path: a daemon owns a store,

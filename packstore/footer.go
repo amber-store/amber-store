@@ -12,8 +12,8 @@ import (
 	"sort"
 
 	"github.com/FastFilter/xorfilter"
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 

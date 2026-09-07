@@ -6,10 +6,10 @@ import (
 	"io"
 	"testing"
 
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/tarexport"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/tarexport"
 )
 
 // buildStore ingests three blobs + a single-leaf directory referencing two

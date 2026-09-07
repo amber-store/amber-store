@@ -13,7 +13,7 @@ piece of content in the store by encoding its **type**, a **logical length**, an
 The package owns both the binary key format (encode / decode / inspect / validate)
 and key construction from content (compute and truncate the Blake3 hash).
 
-- Import path: `github.com/draganm/amber-store/key`
+- Import path: `github.com/amber-store/amber-store/key`
 - Files: `key.go`, `type.go`, `errors.go`, plus `key_test.go`, `type_test.go`.
 
 ## Key format (recap of keys.md)

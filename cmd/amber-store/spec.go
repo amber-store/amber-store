@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/reference"
 )
 
 // resolveSpec parses a content spec: either KEY[/PATH] (lowercase-hex key,

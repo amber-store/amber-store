@@ -12,8 +12,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/key"
 )
 
 func openStore(t *testing.T, dir string, opts ...Option) *Store {

@@ -1,6 +1,6 @@
 // GC vs. two-phase ingest (object writes, then reference publication),
 // ported with the mark-and-sweep collector from Mic92's bitmap GC
-// (draganm/amber-store#9). Sweep policies for unmarked objects:
+// (amber-store/amber-store#9). Sweep policies for unmarked objects:
 //   none     delete all
 //   epoch    keep if written after mark started
 //   horizon  keep if written after the oldest in-flight ingest started

@@ -1,4 +1,4 @@
-module github.com/draganm/amber-store
+module github.com/amber-store/amber-store
 
 go 1.26.3
 

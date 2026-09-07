@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
+	"github.com/amber-store/amber-store/amberpack"
 )
 
 func TestWriteParallelStoresAll(t *testing.T) {

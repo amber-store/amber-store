@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
+	"github.com/amber-store/amber-store/amberpack"
 )
 
 // activeFile writes b to a temp .seg.active file and returns the path.

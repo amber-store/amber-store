@@ -43,7 +43,7 @@ The spec's wire table sketched this endpoint as a *streamed, trailer-signed* res
 
 - [ ] **Step 1: Add the `postObjectsReachable` handler to `server/objects.go`**
 
-Add `"github.com/draganm/amber-store/key"` to the import block, then append this handler (it mirrors `postMissing`'s shape and the "walk fully before writing" convention used by the daemon's content-keys endpoint):
+Add `"github.com/amber-store/amber-store/key"` to the import block, then append this handler (it mirrors `postMissing`'s shape and the "walk fully before writing" convention used by the daemon's content-keys endpoint):
 
 ```go
 // postObjectsReachable walks the tree under the requested root key and returns
@@ -102,7 +102,7 @@ Expected: compiles. (If `server/objects.go` reports `key` unused, you forgot Ste
 
 - [ ] **Step 5: Add end-to-end tests to `remoteclient/remoteclient_test.go`**
 
-Add `"github.com/draganm/amber-store/fstree"` and `"github.com/draganm/amber-store/key"` to the test file's import block (keep gofmt-sorted; `context` is already imported). Then append:
+Add `"github.com/amber-store/amber-store/fstree"` and `"github.com/amber-store/amber-store/key"` to the test file's import block (keep gofmt-sorted; `context` is already imported). Then append:
 
 ```go
 func TestReachableKeys_RoundTrip(t *testing.T) {

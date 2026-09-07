@@ -3,8 +3,8 @@ package fstree_test
 import (
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestChildKeysBlobHasNone(t *testing.T) {

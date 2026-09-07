@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/draganm/amber-store/chunkers"
+	"github.com/amber-store/amber-store/chunkers"
 	"github.com/urfave/cli/v2"
 )
 

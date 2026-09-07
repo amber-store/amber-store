@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"unicode/utf8"
 
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/sshsign"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/sshsign"
 	"github.com/fxamacker/cbor/v2"
 )
 

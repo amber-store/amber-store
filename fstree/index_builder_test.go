@@ -3,8 +3,8 @@ package fstree
 import (
 	"testing"
 
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/key"
 )
 
 // collector records emitted objects and is the test's Emit.

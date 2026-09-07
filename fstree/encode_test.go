@@ -3,8 +3,8 @@ package fstree
 import (
 	"testing"
 
-	"github.com/draganm/amber-store/cborx"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/cborx"
+	"github.com/amber-store/amber-store/key"
 )
 
 func mustBlob(t *testing.T, data []byte) Object {

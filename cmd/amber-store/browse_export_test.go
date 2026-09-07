@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/amber-store/amber-store/client"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
 )
 
 func TestExportCmd_WritesFileAndRefusesOverwrite(t *testing.T) {

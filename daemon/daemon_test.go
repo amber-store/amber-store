@@ -17,14 +17,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/gc"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 // serveOnSocket starts the daemon handler on a fresh unix socket under a temp

@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/gc"
-	"github.com/draganm/amber-store/inbox"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/httpsig"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/amber-store/httpsig"
+	"github.com/amber-store/amber-store/inbox"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 
