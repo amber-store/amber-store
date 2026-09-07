@@ -33,8 +33,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
 )
 
 // testKey returns a valid canonical key to point references at.
@@ -169,7 +169,7 @@ import (
 	"fmt"
 	"unicode/utf8"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/fxamacker/cbor/v2"
 )
 
@@ -293,7 +293,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 )
 
 func open(t *testing.T, dir string) *refstore.Store {
@@ -552,9 +552,9 @@ import (
 
 	"github.com/amber-store/amber-store/daemon"
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 func openRefs(t *testing.T) *refstore.Store {
@@ -771,7 +771,7 @@ func New(store *diskstore.Store, refs *refstore.Store, logger *slog.Logger) http
 }
 ```
 
-Add `"github.com/amber-store/amber-store/refstore"` to the imports.
+Add `"github.com/amber-store/core/refstore"` to the imports.
 
 In `daemon/daemon_test.go`, `serveOnSocket` changes its `srv` line to:
 
@@ -781,7 +781,7 @@ In `daemon/daemon_test.go`, `serveOnSocket` changes its `srv` line to:
 
 (`openRefs` comes from `refs_test.go`, same package.)
 
-In `cmd/amber-store/daemon.go`, `runDaemon` opens the refstore right after the diskstore (add `"path/filepath"` and `"github.com/amber-store/amber-store/refstore"` imports):
+In `cmd/amber-store/daemon.go`, `runDaemon` opens the refstore right after the diskstore (add `"path/filepath"` and `"github.com/amber-store/core/refstore"` imports):
 
 ```go
 	refs, err := refstore.Open(filepath.Join(cfg.store, "refs"), cfg.sync)
@@ -828,9 +828,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 // maxRefRecord bounds a PUT /v1/refs body: a record is a 1 KiB name plus a
@@ -1034,8 +1034,8 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
 )
 
 func TestRefs_ClientRoundTrip(t *testing.T) {
@@ -1104,7 +1104,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/reference"
 )
 
 // ErrRefNotFound reports an absent reference name.
@@ -1630,8 +1630,8 @@ import (
 	"github.com/amber-store/amber-store/client"
 	"github.com/amber-store/amber-store/internal/socketpath"
 	"github.com/amber-store/amber-store/internal/userconfig"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 	"github.com/urfave/cli/v2"
 )
 
@@ -1817,7 +1817,7 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func TestIngestCreatesReference(t *testing.T) {
@@ -1932,7 +1932,7 @@ In `cmd/amber-store/ingest.go`:
 		ArgsUsage: "NAME DIR  (with --output: DIR)",
 ```
 
-2. At the top of `runIngest`, replace the `dirArg` call with mode-dependent argument parsing (add imports `"time"` is already present; add `"github.com/amber-store/amber-store/internal/userconfig"` and `"github.com/amber-store/amber-store/reference"`):
+2. At the top of `runIngest`, replace the `dirArg` call with mode-dependent argument parsing (add imports `"time"` is already present; add `"github.com/amber-store/amber-store/internal/userconfig"` and `"github.com/amber-store/core/reference"`):
 
 ```go
 	var refName, dir, user string
@@ -2116,8 +2116,8 @@ import (
 	"strings"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 )
 
 // resolveSpec parses a content spec: either KEY[/PATH] (lowercase-hex key,

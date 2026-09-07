@@ -192,10 +192,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 	"github.com/zeebo/blake3"
 )
 
@@ -290,9 +290,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 	"github.com/zeebo/blake3"
 )
 
@@ -927,7 +927,7 @@ Change the objects route to **not** use the buffering `auth` wrapper (it self-au
 	mux.HandleFunc("POST /v1/objects", h.postObjects)
 ```
 
-Add the import `"github.com/amber-store/amber-store/inbox"`.
+Add the import `"github.com/amber-store/core/inbox"`.
 
 - [ ] **Step 2: Build to confirm it compiles against the next task's `postObjects` signature**
 
@@ -1038,7 +1038,7 @@ func (h *handler) postObjects(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Update `server/objects.go` imports: add `"github.com/amber-store/amber-store/inbox"`, `"golang.org/x/crypto/ssh"`, `"time"`; drop now-unused `"bytes"`, `"encoding/json"` if nothing else uses them (it does not after removing `uploadResponse`). Keep `"errors"`, `"io"`, `"strings"`, `amberpack`, `fstree`, `httpsig`, `keylist`, `key`, `packstore`, `blake3` — verify with `go build` and fix.
+Update `server/objects.go` imports: add `"github.com/amber-store/core/inbox"`, `"golang.org/x/crypto/ssh"`, `"time"`; drop now-unused `"bytes"`, `"encoding/json"` if nothing else uses them (it does not after removing `uploadResponse`). Keep `"errors"`, `"io"`, `"strings"`, `amberpack`, `fstree`, `httpsig`, `keylist`, `key`, `packstore`, `blake3` — verify with `go build` and fix.
 
 - [ ] **Step 4: Build**
 
@@ -1131,7 +1131,7 @@ Pass it into the config and store it on the struct:
 	return &testServer{srv: srv, store: store, refs: refs, inbox: ib, identity: identity, client: client, admin: admin}
 ```
 
-Add imports `"github.com/amber-store/amber-store/inbox"` and `"path/filepath"` if not already present.
+Add imports `"github.com/amber-store/core/inbox"` and `"path/filepath"` if not already present.
 
 - [ ] **Step 2: Create `server/helpers_test.go`**
 
@@ -1142,9 +1142,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -1338,7 +1338,7 @@ Add `Inbox: ib,` to the `server.Config` literal:
 	})
 ```
 
-Add the import `"github.com/amber-store/amber-store/inbox"`.
+Add the import `"github.com/amber-store/core/inbox"`.
 
 > Defer order: `store.Close()` is deferred at serve.go:167, `ib.Close()` is deferred later, so `ib.Close()` runs first (LIFO) — the inbox finishes draining into the store before the store closes. Correct.
 

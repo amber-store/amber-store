@@ -3,9 +3,9 @@ package keylist_test
 import (
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
 	"github.com/amber-store/amber-store/keylist"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 func testKeys(t *testing.T) []key.Key {

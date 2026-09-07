@@ -17,7 +17,7 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/hanwen/go-fuse/v2/fs"
 	"github.com/hanwen/go-fuse/v2/fuse"
 	"github.com/urfave/cli/v2"

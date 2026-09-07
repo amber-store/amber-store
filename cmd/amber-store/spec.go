@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 )
 
 // resolveSpec parses a content spec: either KEY[/PATH] (lowercase-hex key,

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
 	"github.com/amber-store/amber-store/remotesync"
+	"github.com/amber-store/core/fstree"
 )
 
 func TestPullFetchesWholeTree(t *testing.T) {

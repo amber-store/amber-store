@@ -11,10 +11,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/hanwen/go-fuse/v2/fuse"
 )
 

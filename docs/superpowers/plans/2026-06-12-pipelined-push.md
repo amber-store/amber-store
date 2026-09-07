@@ -191,8 +191,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // testKeys returns n distinct blob keys whose payloads are size bytes long
@@ -333,7 +333,7 @@ package remotesync
 import (
 	"context"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // rebatch drains in — slices of missing keys in arbitrary arrival order —
@@ -474,8 +474,8 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remotesync"
 )
 ```
@@ -609,8 +609,8 @@ import (
 	"sync"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )

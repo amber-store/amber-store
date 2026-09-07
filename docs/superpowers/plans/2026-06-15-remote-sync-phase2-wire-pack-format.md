@@ -74,7 +74,7 @@ import (
 	"io"
 	"iter"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 )
 
 // packMagic identifies the wire pack format and its version (the trailing byte).
@@ -233,8 +233,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // mkObj builds a canonical Blob object from data (Blob length == byte length).

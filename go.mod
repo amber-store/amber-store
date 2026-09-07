@@ -3,16 +3,13 @@ module github.com/amber-store/amber-store
 go 1.26.3
 
 require (
-	github.com/FastFilter/xorfilter v0.5.1
-	github.com/PlakarKorp/go-cdc-chunkers v1.0.3
+	github.com/amber-store/core v0.0.6
 	github.com/charmbracelet/bubbles v1.0.0
 	github.com/charmbracelet/bubbletea v1.3.10
 	github.com/cockroachdb/pebble/v2 v2.1.6
 	github.com/fxamacker/cbor/v2 v2.9.2
-	github.com/go-git/go-git/v5 v5.16.2
 	github.com/hanwen/go-fuse/v2 v2.10.1
 	github.com/hiddeco/sshsig v0.2.0
-	github.com/klauspost/compress v1.17.11
 	github.com/prometheus/client_golang v1.16.0
 	github.com/urfave/cli/v2 v2.27.7
 	github.com/zeebo/blake3 v0.2.4
@@ -24,6 +21,8 @@ require (
 
 require (
 	github.com/DataDog/zstd v1.5.7 // indirect
+	github.com/FastFilter/xorfilter v0.5.1 // indirect
+	github.com/PlakarKorp/go-cdc-chunkers v1.0.3 // indirect
 	github.com/RaduBerinde/axisds v0.1.0 // indirect
 	github.com/RaduBerinde/btreemap v0.0.0-20250419174037-3d62b7205d54 // indirect
 	github.com/atotto/clipboard v0.1.4 // indirect
@@ -49,10 +48,12 @@ require (
 	github.com/getsentry/sentry-go v0.27.0 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
 	github.com/go-git/go-billy/v5 v5.6.2 // indirect
+	github.com/go-git/go-git/v5 v5.16.2 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v0.0.5-0.20231225225746-43d5d4cd4e0e // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
+	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.12 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/kr/text v0.2.0 // indirect

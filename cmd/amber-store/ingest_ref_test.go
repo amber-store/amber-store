@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func TestIngestCreatesReference(t *testing.T) {

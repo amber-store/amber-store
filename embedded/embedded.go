@@ -17,13 +17,13 @@ import (
 	"sync"
 
 	"github.com/amber-store/amber-store/identity"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
 	"github.com/amber-store/amber-store/remoteclient"
 	"github.com/amber-store/amber-store/remotes"
 	"github.com/amber-store/amber-store/remotesync"
+	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -142,7 +142,7 @@ func (s *Store) Push(ctx context.Context, remote, refName string, opts remotesyn
 	if err != nil {
 		return remotesync.PushStats{}, fmt.Errorf("reading local reference %q: %w", refName, err)
 	}
-	rec, err := reference.DecodeVerified(raw)
+	rec, err := sshsign.DecodeVerifiedReference(raw)
 	if err != nil {
 		return remotesync.PushStats{}, fmt.Errorf("local reference %q: %w", refName, err)
 	}
@@ -182,7 +182,7 @@ func (s *Store) Pull(ctx context.Context, remote, refName string, opts remotesyn
 	if err != nil {
 		return key.Key{}, remotesync.PullStats{}, err
 	}
-	rec, err := reference.DecodeVerified(raw)
+	rec, err := sshsign.DecodeVerifiedReference(raw)
 	if err != nil {
 		return key.Key{}, remotesync.PullStats{}, fmt.Errorf("remote reference %q: %w", refName, err)
 	}
@@ -226,7 +226,7 @@ func (s *Store) PullTree(ctx context.Context, remote string, root key.Key, opts 
 // some other party pushed. The server's completeness gate still guarantees
 // objects-before-ref.
 func (s *Store) PublishRef(ctx context.Context, remote string, record []byte) error {
-	rec, err := reference.DecodeVerified(record)
+	rec, err := sshsign.DecodeVerifiedReference(record)
 	if err != nil {
 		return err
 	}

@@ -17,12 +17,12 @@ import (
 
 	"github.com/amber-store/amber-store/admin"
 	"github.com/amber-store/amber-store/allowstore"
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 // memObjects is an in-memory admin.ObjectGetter.

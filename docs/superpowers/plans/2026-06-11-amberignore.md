@@ -422,7 +422,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/core/chunkers"
 	"github.com/amber-store/amber-store/internal/amberignore"
 )
 
@@ -714,7 +714,7 @@ The progress bar is sized by `scanTree`; it must apply the identical filter or t
 
 - [ ] **Step 1: Write the failing tests**
 
-Append to `cmd/amber-store/amberignore_ingest_test.go` (add `"github.com/amber-store/amber-store/key"` to its imports):
+Append to `cmd/amber-store/amberignore_ingest_test.go` (add `"github.com/amber-store/core/key"` to its imports):
 
 ```go
 // TestScanTree_HonorsAmberignore: the pre-scan must count exactly the entries

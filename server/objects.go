@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/allowlist"
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
 	"github.com/amber-store/amber-store/httpsig"
-	"github.com/amber-store/amber-store/inbox"
-	"github.com/amber-store/amber-store/key"
 	"github.com/amber-store/amber-store/keylist"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/inbox"
+	"github.com/amber-store/core/key"
 	"github.com/zeebo/blake3"
 	"golang.org/x/crypto/ssh"
 )

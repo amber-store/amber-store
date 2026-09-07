@@ -8,7 +8,7 @@ import (
 
 	"github.com/amber-store/amber-store/allowlist"
 	"github.com/amber-store/amber-store/grant"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 )
 
 func TestWipeClearsObjectsAndRefsAndKeepsServing(t *testing.T) {

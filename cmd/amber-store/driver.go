@@ -5,11 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/amber-store/amber-store/amberignore"
-	"github.com/amber-store/amber-store/cborx"
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/amberignore"
+	"github.com/amber-store/core/cborx"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 

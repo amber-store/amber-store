@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
 	"github.com/amber-store/amber-store/socketpath"
 	"github.com/amber-store/amber-store/sshsign"
 	"github.com/amber-store/amber-store/userconfig"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/crypto/ssh"
 )

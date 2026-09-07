@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/amber-store/amber-store/reference"
 	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/core/reference"
 )
 
 // signReference signs rec with the key at keyPath: it records the signer's

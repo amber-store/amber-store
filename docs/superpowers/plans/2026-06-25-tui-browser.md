@@ -720,7 +720,7 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"golang.org/x/sys/unix"
 )
@@ -848,7 +848,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/bubbles/textinput"
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -1356,7 +1356,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // exportCmd streams a directory tar or a file's raw bytes to path. It refuses to

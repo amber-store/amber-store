@@ -147,9 +147,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/keylist"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func testKeys(t *testing.T) []key.Key {
@@ -227,7 +227,7 @@ package keylist
 import (
 	"fmt"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // Flatten concatenates keys in order.
@@ -929,8 +929,8 @@ package fstree_test
 import (
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 func TestChildKeysBlobHasNone(t *testing.T) {
@@ -1001,7 +1001,7 @@ package fstree
 import (
 	"fmt"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // ChildKeys returns the keys directly referenced by the object with key k
@@ -1414,7 +1414,7 @@ import (
 	"github.com/amber-store/amber-store/diskstore"
 	"github.com/amber-store/amber-store/internal/allowlist"
 	"github.com/amber-store/amber-store/internal/httpsig"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
@@ -1686,7 +1686,7 @@ import (
 	"github.com/amber-store/amber-store/internal/allowlist"
 	"github.com/amber-store/amber-store/internal/httpsig"
 	"github.com/amber-store/amber-store/internal/nonces"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -1884,9 +1884,9 @@ package server_test
 import (
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/keylist"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // storeBlobs writes blobs into ts.store and returns their objects.
@@ -2295,9 +2295,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/reference"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -2458,9 +2458,9 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 // refName extracts and validates the ?name= query parameter.
@@ -2681,7 +2681,7 @@ import (
 
 	"github.com/amber-store/amber-store/diskstore"
 	"github.com/amber-store/amber-store/internal/allowlist"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/remoteclient"
 	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
@@ -3008,8 +3008,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remoteclient"
 )
 
@@ -3104,7 +3104,7 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/reference"
 	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/crypto/ssh"
 )
@@ -3186,11 +3186,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/httpsig"
 	"github.com/amber-store/amber-store/internal/keylist"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -3383,8 +3383,8 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remotesync"
 )
 
@@ -3466,7 +3466,7 @@ package remotesync
 
 import (
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // DefaultBatchBytes is the default per-batch payload target.
@@ -3600,7 +3600,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/remotesync"
 )
 
@@ -3688,8 +3688,8 @@ import (
 	"sync"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )
@@ -3811,7 +3811,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/remotesync"
 )
 
@@ -3921,8 +3921,8 @@ import (
 	"sync"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )
@@ -4067,7 +4067,7 @@ import (
 	"github.com/amber-store/amber-store/diskstore"
 	"github.com/amber-store/amber-store/internal/allowlist"
 	"github.com/amber-store/amber-store/internal/remotes"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
@@ -4531,10 +4531,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -4695,9 +4695,9 @@ import (
 
 	"github.com/amber-store/amber-store/internal/remotes"
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/remoteclient"
 	"github.com/amber-store/amber-store/remotesync"
 )
@@ -5466,7 +5466,7 @@ import (
 	"github.com/amber-store/amber-store/diskstore"
 	"github.com/amber-store/amber-store/internal/allowlist"
 	"github.com/amber-store/amber-store/internal/sshsign"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/server"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/crypto/ssh"
@@ -5835,7 +5835,7 @@ import (
 
 	"github.com/amber-store/amber-store/diskstore"
 	"github.com/amber-store/amber-store/internal/allowlist"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )

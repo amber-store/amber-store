@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/amber-store/amber-store/gc"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/gc"
+	"github.com/amber-store/core/key"
 )
 
 // ErrCycleRunning reports that the daemon already has a GC cycle in flight;

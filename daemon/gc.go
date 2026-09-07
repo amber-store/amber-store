@@ -12,7 +12,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/core/gc"
 )
 
 // gcStatus reports per-pack liveness against a fresh advisory mark, totals,

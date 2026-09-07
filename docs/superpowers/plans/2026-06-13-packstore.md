@@ -97,7 +97,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // blobObj builds a canonical Blob object for data.
@@ -307,7 +307,7 @@ import (
 	"hash/crc32"
 	"math"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/klauspost/compress/zstd"
 )
 
@@ -492,7 +492,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // testEntries builds n index entries with distinct keys and synthetic offsets.
@@ -595,7 +595,7 @@ import (
 	"slices"
 	"sort"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 const (
@@ -1466,7 +1466,7 @@ import (
 	"bytes"
 	"os"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // activeLoc locates one record inside the active segment.
@@ -1794,7 +1794,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -2649,7 +2649,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func TestMissing(t *testing.T) {
@@ -2708,7 +2708,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -2884,7 +2884,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -2932,7 +2932,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -3388,7 +3388,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // TestOracle drives a store through random Put/WriteBatch/reopen cycles with
