@@ -5,7 +5,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestMissing(t *testing.T) {

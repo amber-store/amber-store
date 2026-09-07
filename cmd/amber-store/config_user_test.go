@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/userconfig"
+	"github.com/amber-store/amber-store/userconfig"
 )
 
 func TestConfigUserCommand(t *testing.T) {

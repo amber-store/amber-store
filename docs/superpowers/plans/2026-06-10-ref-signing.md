@@ -40,7 +40,7 @@ API reference for `hiddeco/sshsig` v0.2.0 (verified):
 - [ ] **Step 1: Add dependencies**
 
 ```bash
-cd /Users/dragan/draganm/amber-store
+cd /Users/dragan/amber-store/amber-store
 go get github.com/hiddeco/sshsig@v0.2.0 golang.org/x/crypto@latest golang.org/x/term@latest
 ```
 
@@ -64,7 +64,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/internal/sshsign"
+	"github.com/amber-store/amber-store/internal/sshsign"
 	"github.com/hiddeco/sshsig"
 	"golang.org/x/crypto/ssh"
 )
@@ -743,7 +743,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/internal/userconfig"
+	"github.com/amber-store/amber-store/internal/userconfig"
 )
 
 func TestSigningKeyRoundTrip(t *testing.T) {
@@ -913,7 +913,7 @@ Expected: new tests FAIL (flag not defined → urfave/cli error); pre-existing T
 
 - [ ] **Step 3: Implement the flag**
 
-Replace the body of `configUserCommand()` in `cmd/amber-store/config_user.go` (imports gain `errors`, `path/filepath`, `github.com/draganm/amber-store/internal/sshsign`):
+Replace the body of `configUserCommand()` in `cmd/amber-store/config_user.go` (imports gain `errors`, `path/filepath`, `github.com/amber-store/amber-store/internal/sshsign`):
 
 ```go
 func configUserCommand() *cli.Command {
@@ -994,7 +994,7 @@ git commit -m "feat: config-user --signing-key sets, preserves, clears, validate
 
 - [ ] **Step 1: Write the failing tests**
 
-Append to `cmd/amber-store/ref_test.go` (imports gain `crypto/ed25519`, `crypto/rand`, `encoding/json`, `encoding/pem`, `github.com/draganm/amber-store/internal/sshsign`, `github.com/hiddeco/sshsig`, `golang.org/x/crypto/ssh`; `bytes`, `context`, `os`, `filepath` are already imported there — verify and add any missing):
+Append to `cmd/amber-store/ref_test.go` (imports gain `crypto/ed25519`, `crypto/rand`, `encoding/json`, `encoding/pem`, `github.com/amber-store/amber-store/internal/sshsign`, `github.com/hiddeco/sshsig`, `golang.org/x/crypto/ssh`; `bytes`, `context`, `os`, `filepath` are already imported there — verify and add any missing):
 
 ```go
 // writeSigningKey writes an unencrypted ed25519 OpenSSH private key and
@@ -1095,7 +1095,7 @@ Expected: `TestRefCreateSignsWhenConfigured` FAILS at "reference has no signatur
 
 - [ ] **Step 3: Implement signing in ref create**
 
-In `cmd/amber-store/ref.go` (imports gain `github.com/draganm/amber-store/internal/sshsign`), replace the action tail of `refCreateCommand` — currently:
+In `cmd/amber-store/ref.go` (imports gain `github.com/amber-store/amber-store/internal/sshsign`), replace the action tail of `refCreateCommand` — currently:
 
 ```go
 			rec := reference.Reference{
@@ -1180,7 +1180,7 @@ Expected: FAIL — "reference has no signature".
 
 - [ ] **Step 3: Implement signing in ingest**
 
-In `cmd/amber-store/ingest.go` (imports gain `github.com/draganm/amber-store/internal/sshsign`):
+In `cmd/amber-store/ingest.go` (imports gain `github.com/amber-store/amber-store/internal/sshsign`):
 
 At `runIngest`'s variable declaration (line ~233), change
 

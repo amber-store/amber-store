@@ -14,8 +14,8 @@ import (
 	"slices"
 	"time"
 
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/sshsign"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/sshsign"
 	"github.com/fxamacker/cbor/v2"
 	"golang.org/x/crypto/ssh"
 )

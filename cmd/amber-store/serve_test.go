@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/crypto/ssh"
 )
 

@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/httpsig"
-	"github.com/draganm/amber-store/keylist"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/httpsig"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/keylist"
 	"github.com/zeebo/blake3"
 )
 

@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/amberignore"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberignore"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 

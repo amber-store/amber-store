@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // TestContentKeys_ListsReachableKeys ingests a small tree and checks that

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/tarextract"
+	"github.com/amber-store/amber-store/tarextract"
 )
 
 func TestExtract_FilesDirsAndDeferredDirMeta(t *testing.T) {

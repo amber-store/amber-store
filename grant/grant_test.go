@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/sshsign"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/sshsign"
 	"golang.org/x/crypto/ssh"
 )
 

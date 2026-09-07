@@ -12,8 +12,8 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/draganm/amber-store/admin"
-	"github.com/draganm/amber-store/allowstore"
+	"github.com/amber-store/amber-store/admin"
+	"github.com/amber-store/amber-store/allowstore"
 	"golang.org/x/crypto/ssh"
 )
 

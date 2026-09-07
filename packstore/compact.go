@@ -1,7 +1,7 @@
 // The mark-and-sweep GC surface: Liveness (the dry run) and Compact (the
 // sweep), driven by the collector in package gc against a MarkSet built
 // from the references' closures. Ported from Mic92's bitmap GC
-// (draganm/amber-store#9); see architecture/mark-sweep-gc.md and
+// (amber-store/amber-store#9); see architecture/mark-sweep-gc.md and
 // specs/gc.qnt.
 
 package packstore
@@ -16,8 +16,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -53,7 +53,7 @@ type CompactOpts struct {
 }
 
 type CompactStats struct {
-	SegmentsScanned   int      // sealed segments considered
+	SegmentsScanned   int // sealed segments considered
 	SegmentsCompacted int
 	Victims           []uint64 // compacted segment ids, ascending
 	RecordsCopied     int

@@ -255,7 +255,7 @@ direnv allow        # or: nix develop
 go build ./...
 ```
 
-- Module: `github.com/draganm/amber-store`
+- Module: `github.com/amber-store/amber-store`
 - Go: 1.26+
 - The `browse` TUI is built on [Bubble Tea](https://github.com/charmbracelet/bubbletea)
   (with `bubbles` and `lipgloss`); the rest of the CLI has no UI dependencies.

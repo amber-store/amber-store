@@ -64,7 +64,7 @@ import (
 	"hash/crc32"
 	"math"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"github.com/klauspost/compress/zstd"
 )
 
@@ -218,7 +218,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // incompressible returns n deterministic pseudo-random bytes (zstd cannot shrink them).
@@ -477,7 +477,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // blobObj builds a canonical Blob object for data.
@@ -534,8 +534,8 @@ package packstore
 import (
 	"hash/crc32"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/key"
 )
 
 const (
@@ -565,7 +565,7 @@ Note: `tagChunk` is gone from `packstore`; the active-segment append path (Step 
 
 - [ ] **Step 4: Re-point `packstore/packstore.go`**
 
-Add `"github.com/draganm/amber-store/amberpack"` to its import block. Then:
+Add `"github.com/amber-store/amber-store/amberpack"` to its import block. Then:
 
 - Line ~433 (`WriteBatch`): `rec, err := encodeRecord(obj.Key, obj.Data)` → `rec, err := amberpack.EncodeRecord(obj.Key, obj.Data)`
 - Line ~462 (`Put`): `rec, err := encodeRecord(k, data)` → `rec, err := amberpack.EncodeRecord(k, data)`
@@ -615,7 +615,7 @@ Add the `amberpack` import. In `(*footerView).get` (around lines 368–375):
 
 - [ ] **Step 9: Re-point the `packstore` tests that call the codec directly**
 
-Add `"github.com/draganm/amber-store/amberpack"` imports where needed and change the calls:
+Add `"github.com/amber-store/amber-store/amberpack"` imports where needed and change the calls:
 
 - `packstore/recover_test.go` — `buildBody`: `rec, err := encodeRecord(o.Key, o.Data)` → `rec, err := amberpack.EncodeRecord(o.Key, o.Data)`.
 - `packstore/verify_test.go` — replace every `encodeRecord(` with `amberpack.EncodeRecord(`, `parseRecord(` with `amberpack.ParseRecord(`, `decodePayload(` with `amberpack.DecodePayload(`, and any `recHeaderSize` with `amberpack.RecHeaderSize`. If a parsed record's fields are read, use the exported `.Key/.Flags/.Ulen/.Slen`.

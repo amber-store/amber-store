@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/draganm/amber-store/client"
+	"github.com/amber-store/amber-store/client"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/sys/unix"
 )

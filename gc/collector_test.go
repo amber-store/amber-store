@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 // testStore is an open packstore+refstore pair in one temp dir.

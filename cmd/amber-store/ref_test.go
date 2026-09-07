@@ -13,10 +13,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/sshsign"
-	"github.com/draganm/amber-store/userconfig"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/amber-store/userconfig"
 	"github.com/hiddeco/sshsig"
 	"golang.org/x/crypto/ssh"
 )

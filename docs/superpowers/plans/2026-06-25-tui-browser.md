@@ -6,11 +6,11 @@
 
 **Architecture:** A bubbletea Elm-architecture model lives in package `main` under `cmd/amber-store`. Pure helpers (content detection, hex rendering, CBOR→JSON, windowed line slicing) are testable without the TUI runtime; the model is driven through a narrow `browseStore` interface satisfied by `*client.Client`, so unit tests feed `tea.Msg`s to `Update` against a fake store. Navigation is by content key; the file viewer fetches up to a byte cap and renders only the visible window.
 
-**Tech Stack:** Go, `github.com/charmbracelet/bubbletea`, `github.com/charmbracelet/bubbles/textinput`, `github.com/charmbracelet/lipgloss`, existing `github.com/fxamacker/cbor/v2`, `github.com/urfave/cli/v2`, `github.com/draganm/amber-store/client`, `golang.org/x/term`, `golang.org/x/sys/unix`.
+**Tech Stack:** Go, `github.com/charmbracelet/bubbletea`, `github.com/charmbracelet/bubbles/textinput`, `github.com/charmbracelet/lipgloss`, existing `github.com/fxamacker/cbor/v2`, `github.com/urfave/cli/v2`, `github.com/amber-store/amber-store/client`, `golang.org/x/term`, `golang.org/x/sys/unix`.
 
 ## Global Constraints
 
-- Go 1.26.3 (module `github.com/draganm/amber-store`).
+- Go 1.26.3 (module `github.com/amber-store/amber-store`).
 - New CLI code lives in package `main` under `cmd/amber-store` (repo convention).
 - Reuse existing helpers: `resolveSpec` (spec.go), `parseHexKey` (ref.go/daemon), `modeString`/`sizeString`/`formatMtime` (ls.go), `socketFlag` (ref.go), `socketpath.Resolve`, `client.New`.
 - CBOR→JSON uses the already-present `github.com/fxamacker/cbor/v2`; add no other CBOR dep.
@@ -719,8 +719,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"golang.org/x/sys/unix"
 )
@@ -847,8 +847,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/bubbles/textinput"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -1285,7 +1285,7 @@ import (
 	"testing"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
+	"github.com/amber-store/amber-store/client"
 )
 
 func TestExportCmd_WritesFileAndRefusesOverwrite(t *testing.T) {
@@ -1356,7 +1356,7 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // exportCmd streams a directory tar or a file's raw bytes to path. It refuses to
@@ -1564,8 +1564,8 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/socketpath"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/socketpath"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/term"
 )
@@ -1674,7 +1674,7 @@ git commit -m "feat(browse): wire browse command into the CLI"
 - [ ] **Step 1: Run the whole package test suite**
 
 Run: `go test ./cmd/amber-store/ -count=1`
-Expected: `ok  github.com/draganm/amber-store/cmd/amber-store`.
+Expected: `ok  github.com/amber-store/amber-store/cmd/amber-store`.
 
 - [ ] **Step 2: Vet**
 

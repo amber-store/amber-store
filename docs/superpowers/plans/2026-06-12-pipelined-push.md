@@ -23,7 +23,7 @@
 | `remotesync/push_test.go` | Modify | New e2e tests (coalescence, no-op, monotonic progress, errors) |
 | `architecture/remote.md` | Modify | Update the **Push-objects** section |
 
-All commands run from the repo root `/Users/dragan/draganm/amber-store`.
+All commands run from the repo root `/Users/dragan/amber-store/amber-store`.
 
 ---
 
@@ -191,8 +191,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 // testKeys returns n distinct blob keys whose payloads are size bytes long
@@ -333,7 +333,7 @@ package remotesync
 import (
 	"context"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // rebatch drains in — slices of missing keys in arbitrary arrival order —
@@ -473,10 +473,10 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remotesync"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remotesync"
 )
 ```
 
@@ -608,10 +608,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )
 

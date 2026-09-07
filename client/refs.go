@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/reference"
 )
 
 // ErrRefNotFound reports an absent reference name.

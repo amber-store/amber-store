@@ -77,7 +77,7 @@ direnv; the `go` toolchain (1.26) is already on PATH inside the repo.
 - [ ] **Step 1: Add dependencies**
 
 ```bash
-cd /Users/dragan/draganm/amber-store
+cd /Users/dragan/amber-store/amber-store
 go get github.com/klauspost/compress@v1.17.11
 ```
 
@@ -97,7 +97,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // blobObj builds a canonical Blob object for data.
@@ -307,7 +307,7 @@ import (
 	"hash/crc32"
 	"math"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"github.com/klauspost/compress/zstd"
 )
 
@@ -492,7 +492,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // testEntries builds n index entries with distinct keys and synthetic offsets.
@@ -595,7 +595,7 @@ import (
 	"slices"
 	"sort"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 const (
@@ -1466,7 +1466,7 @@ import (
 	"bytes"
 	"os"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // activeLoc locates one record inside the active segment.
@@ -1794,7 +1794,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -2649,7 +2649,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestMissing(t *testing.T) {
@@ -2708,7 +2708,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -2884,7 +2884,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -2932,7 +2932,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -3388,7 +3388,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 )
 
 // TestOracle drives a store through random Put/WriteBatch/reopen cycles with

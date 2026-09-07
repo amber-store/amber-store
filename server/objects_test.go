@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/httpsig"
-	"github.com/draganm/amber-store/keylist"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/httpsig"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/keylist"
 )
 
 // storeBlobs writes blobs into ts.store and returns their objects.

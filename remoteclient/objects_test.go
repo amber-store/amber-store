@@ -9,10 +9,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/draganm/amber-store/amberpack"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/remoteclient"
+	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/remoteclient"
 )
 
 // trailerStrippingProxy forwards requests to backend, preserving method,

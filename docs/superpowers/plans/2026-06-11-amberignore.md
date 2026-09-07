@@ -11,7 +11,7 @@
 **Spec:** `docs/superpowers/specs/2026-06-11-amberignore-design.md`
 
 **Conventions for this repo:**
-- Run tests with `go test ./...` from the repo root (`/Users/dragan/draganm/amber-store`).
+- Run tests with `go test ./...` from the repo root (`/Users/dragan/amber-store/amber-store`).
 - Run `gofmt -w` on every file you touch before committing.
 - Do not leave any compiled binaries behind (`go build` to a temp path or use `go vet` / `go test` only).
 - Parameter order everywhere: the matcher goes immediately after the directory, e.g. `buildDir(path, ign, emit)`, `scanTree(dir, ign, jobs)`.
@@ -422,8 +422,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/draganm/amber-store/chunkers"
-	"github.com/draganm/amber-store/internal/amberignore"
+	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/amber-store/internal/amberignore"
 )
 
 // writeIgnoredTree populates dir with a tree containing .amberignore files
@@ -529,7 +529,7 @@ Expected: FAIL (compile error — `collectSequential` does not take a matcher ye
 
 - [ ] **Step 3: Update `driver.go`**
 
-Add `"github.com/draganm/amber-store/internal/amberignore"` to the imports, then replace `buildDir` and `buildEntry`:
+Add `"github.com/amber-store/amber-store/internal/amberignore"` to the imports, then replace `buildDir` and `buildEntry`:
 
 ```go
 // buildDir builds the directory at path and returns its root key, emitting every
@@ -714,7 +714,7 @@ The progress bar is sized by `scanTree`; it must apply the identical filter or t
 
 - [ ] **Step 1: Write the failing tests**
 
-Append to `cmd/amber-store/amberignore_ingest_test.go` (add `"github.com/draganm/amber-store/key"` to its imports):
+Append to `cmd/amber-store/amberignore_ingest_test.go` (add `"github.com/amber-store/amber-store/key"` to its imports):
 
 ```go
 // TestScanTree_HonorsAmberignore: the pre-scan must count exactly the entries

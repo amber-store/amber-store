@@ -11,13 +11,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/gc"
-	"github.com/draganm/amber-store/key"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/reference"
 )
 
 // gcServer serves the daemon over a unix socket with a small-segment store

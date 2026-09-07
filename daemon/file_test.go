@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestGetFile_Blob(t *testing.T) {

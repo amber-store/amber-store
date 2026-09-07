@@ -1,6 +1,6 @@
 // Package gc implements the mark-and-sweep collector of
 // architecture/mark-sweep-gc.md, a port of Mic92's bitmap GC
-// (draganm/amber-store#9): a cycle marks every key reachable from the
+// (amber-store/amber-store#9): a cycle marks every key reachable from the
 // references' roots into a packstore.MarkSet — one bit per sealed record,
 // slotted by the packs' own footer indexes — and sweeps by rewriting the
 // packs whose dead ratio crosses the line (packstore.Compact). Nothing is

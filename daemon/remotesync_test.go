@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/reference"
 )
 
 // lastEvent decodes the final NDJSON line of a sync response.

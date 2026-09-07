@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/draganm/amber-store/httpsig"
+	"github.com/amber-store/amber-store/httpsig"
 	"golang.org/x/crypto/ssh"
 )
 

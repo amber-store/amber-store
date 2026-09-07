@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/reference"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/amber-store/refstore"
 )
 
 func openRefs(t *testing.T) *refstore.Store {

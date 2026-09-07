@@ -48,7 +48,7 @@ func TestFileView_ScrollClamp(t *testing.T) {
 		lines = append(lines, "x")
 	}
 	fv := newFileView("a", 0, []byte(strings.Join(lines, "\n")), false)
-	fv.scroll(1000, 10) // far past end
+	fv.scroll(1000, 10)                 // far past end
 	maxTop := fv.lineCount() - (10 - 2) // height minus header + separator
 	if fv.top != maxTop {
 		t.Fatalf("top = %d, want clamped %d", fv.top, maxTop)

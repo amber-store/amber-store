@@ -12,13 +12,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/daemon"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/inbox"
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/remotes"
-	"github.com/draganm/amber-store/refstore"
-	"github.com/draganm/amber-store/server"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/daemon"
+	"github.com/amber-store/amber-store/inbox"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/amber-store/remotes"
+	"github.com/amber-store/amber-store/server"
 	"golang.org/x/crypto/ssh"
 )
 

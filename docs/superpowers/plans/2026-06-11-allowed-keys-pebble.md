@@ -10,7 +10,7 @@
 
 **Spec:** `docs/superpowers/specs/2026-06-11-allowed-keys-pebble-design.md`
 
-Run all commands from the repo root `/Users/dragan/draganm/amber-store`.
+Run all commands from the repo root `/Users/dragan/amber-store/amber-store`.
 
 ---
 
@@ -95,7 +95,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/internal/allowstore"
+	"github.com/amber-store/amber-store/internal/allowstore"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -304,7 +304,7 @@ import (
 	"sync/atomic"
 
 	"github.com/cockroachdb/pebble/v2"
-	"github.com/draganm/amber-store/internal/allowlist"
+	"github.com/amber-store/amber-store/internal/allowlist"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -529,7 +529,7 @@ In `admin/admin_test.go`:
 1. In the imports, replace `"os"` and the allowfile import:
 
 ```go
-	"github.com/draganm/amber-store/internal/allowstore"
+	"github.com/amber-store/amber-store/internal/allowstore"
 ```
 
 (keep `"path/filepath"`; delete the `"os"` import — nothing reads or writes files anymore).
@@ -636,7 +636,7 @@ In `admin/admin.go`:
 1. In the imports, replace the allowfile import with:
 
 ```go
-	"github.com/draganm/amber-store/internal/allowstore"
+	"github.com/amber-store/amber-store/internal/allowstore"
 ```
 
 2. In `Config`, change the `Keys` field:
@@ -836,7 +836,7 @@ In `cmd/amber-store/serve.go`:
 1. In the imports, replace the allowfile import with:
 
 ```go
-	"github.com/draganm/amber-store/internal/allowstore"
+	"github.com/amber-store/amber-store/internal/allowstore"
 ```
 
 (`os`, `os/signal`, and `syscall` stay — `signal.NotifyContext`, `os.Interrupt`, and `syscall.SIGTERM` still use them.)

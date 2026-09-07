@@ -18,8 +18,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/draganm/amber-store/grant"
-	"github.com/draganm/amber-store/httpsig"
+	"github.com/amber-store/amber-store/grant"
+	"github.com/amber-store/amber-store/httpsig"
 	"golang.org/x/crypto/ssh"
 )
 

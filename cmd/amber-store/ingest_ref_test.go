@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestIngestCreatesReference(t *testing.T) {

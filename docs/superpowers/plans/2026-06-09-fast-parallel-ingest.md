@@ -514,8 +514,8 @@ import (
 	"iter"
 	"testing"
 
-	"github.com/draganm/amber-store/diskstore"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/diskstore"
+	"github.com/amber-store/amber-store/key"
 )
 
 func TestWriteParallel_MixedRetrievable(t *testing.T) {
@@ -610,7 +610,7 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sync/errgroup"
 )
 

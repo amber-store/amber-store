@@ -6,9 +6,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/reference"
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/reference"
 )
 
 func TestRefs_ClientRoundTrip(t *testing.T) {

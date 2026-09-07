@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/amber-store/amber-store/client"
+	"github.com/amber-store/amber-store/key"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/draganm/amber-store/client"
-	"github.com/draganm/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -250,10 +250,10 @@ func TestModel_ViewTruncatesToWidth(t *testing.T) {
 
 func TestExpandTabs(t *testing.T) {
 	cases := map[string]string{
-		"\tx":      "        x",  // tab -> 8 spaces
-		"ab\tc":    "ab      c",  // tab fills to column 8
+		"\tx":         "        x",         // tab -> 8 spaces
+		"ab\tc":       "ab      c",         // tab fills to column 8
 		"abcdefgh\tx": "abcdefgh        x", // already at a stop -> full 8
-		"no tabs":  "no tabs",
+		"no tabs":     "no tabs",
 	}
 	for in, want := range cases {
 		if got := expandTabs(in); got != want {

@@ -305,7 +305,7 @@ func TestServeRequiresFlags(t *testing.T) {
 }
 ```
 
-New test (also add `bytes`, `context`, `net`, `time`, and `github.com/draganm/amber-store/remoteclient` to the imports):
+New test (also add `bytes`, `context`, `net`, `time`, and `github.com/amber-store/amber-store/remoteclient` to the imports):
 
 ```go
 // TestServeAutoIdentity starts serve without --identity and checks that the
@@ -383,7 +383,7 @@ In `cmd/amber-store/serve.go`:
 },
 ```
 
-2. Add a resolution helper next to `remoteIdentitySigner` (import `github.com/draganm/amber-store/internal/identity`):
+2. Add a resolution helper next to `remoteIdentitySigner` (import `github.com/amber-store/amber-store/internal/identity`):
 
 ```go
 // resolveIdentity loads the explicitly configured identity, or the store's
@@ -541,7 +541,7 @@ In `cmd/amber-store/daemon.go`:
 },
 ```
 
-2. Add the helper (import `github.com/draganm/amber-store/internal/identity`):
+2. Add the helper (import `github.com/amber-store/amber-store/internal/identity`):
 
 ```go
 // defaultRemoteSigner returns the daemon's default remote-sync signer: the

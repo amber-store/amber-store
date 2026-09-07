@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/draganm/amber-store/fstree"
-	"github.com/draganm/amber-store/cborx"
-	"github.com/draganm/amber-store/key"
+	"github.com/amber-store/amber-store/cborx"
+	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/amber-store/key"
 	"golang.org/x/sys/unix"
 )
 

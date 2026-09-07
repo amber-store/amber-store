@@ -19,14 +19,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/draganm/amber-store/allowlist"
-	"github.com/draganm/amber-store/gc"
-	"github.com/draganm/amber-store/grant"
-	"github.com/draganm/amber-store/httpsig"
-	"github.com/draganm/amber-store/inbox"
-	"github.com/draganm/amber-store/nonces"
-	"github.com/draganm/amber-store/packstore"
-	"github.com/draganm/amber-store/refstore"
+	"github.com/amber-store/amber-store/allowlist"
+	"github.com/amber-store/amber-store/gc"
+	"github.com/amber-store/amber-store/grant"
+	"github.com/amber-store/amber-store/httpsig"
+	"github.com/amber-store/amber-store/inbox"
+	"github.com/amber-store/amber-store/nonces"
+	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/amber-store/refstore"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -51,10 +51,10 @@ type Config struct {
 }
 
 type handler struct {
-	store    *packstore.Store
-	refs     *refstore.Store
-	allow    func() *allowlist.List
-	identity ssh.Signer
+	store        *packstore.Store
+	refs         *refstore.Store
+	allow        func() *allowlist.List
+	identity     ssh.Signer
 	identityWire []byte // identity.PublicKey().Marshal(): request audience and /v1/identity body
 	log          *slog.Logger
 	window       time.Duration
