@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 

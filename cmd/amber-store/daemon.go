@@ -15,12 +15,12 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/daemon"
-	"github.com/amber-store/amber-store/gc"
 	"github.com/amber-store/amber-store/identity"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/refstore"
 	"github.com/amber-store/amber-store/remotes"
 	"github.com/amber-store/amber-store/socketpath"
+	"github.com/amber-store/core/gc"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
 	"github.com/urfave/cli/v2"
 	"golang.org/x/crypto/ssh"
 )

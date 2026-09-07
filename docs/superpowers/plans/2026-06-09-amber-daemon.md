@@ -62,8 +62,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // mkObj builds a canonical Blob object from data (Blob length == byte length).
@@ -207,8 +207,8 @@ import (
 	"io"
 	"iter"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // magic identifies the format and its version (the trailing byte).
@@ -431,7 +431,7 @@ func TestWriteParallel_VerifyAcceptsHonestObjects(t *testing.T) {
 }
 ```
 
-Add `"github.com/amber-store/amber-store/key"` to the test file's imports (for `key.Size`).
+Add `"github.com/amber-store/core/key"` to the test file's imports (for `key.Size`).
 
 - [ ] **Step 2: Update the 3 existing `WriteParallel` call sites** in `diskstore/parallel_test.go`
 
@@ -451,7 +451,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/zeebo/blake3"
 )
 
@@ -668,9 +668,9 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/tarexport"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/tarexport"
 )
 
 // buildStore ingests three blobs + a single-leaf directory referencing two
@@ -771,9 +771,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/cborx"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -1016,7 +1016,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/tarextract"
+	"github.com/amber-store/core/tarextract"
 )
 
 func TestExtract_FilesDirsAndDeferredDirMeta(t *testing.T) {
@@ -1437,7 +1437,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // Stats mirrors the daemon's POST /v1/objects response.
@@ -1551,12 +1551,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/core/amberpack"
 	"github.com/amber-store/amber-store/client"
 	"github.com/amber-store/amber-store/daemon"
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // serveOnSocket starts the daemon handler on a fresh unix socket under a temp
@@ -1662,9 +1662,9 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/core/amberpack"
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/tarexport"
+	"github.com/amber-store/core/tarexport"
 )
 
 type handler struct {
@@ -1835,7 +1835,7 @@ Expected: FAIL — `501 Not Implemented` surfaced as a client error / wrong stat
 
 - [ ] **Step 3: Replace `getTar` in `daemon/daemon.go`**
 
-Add imports `"encoding/hex"`, `"github.com/amber-store/amber-store/key"`, `"github.com/amber-store/amber-store/tarexport"` (remove the placeholder `_ = tarexport.Write` line), then:
+Add imports `"encoding/hex"`, `"github.com/amber-store/core/key"`, `"github.com/amber-store/core/tarexport"` (remove the placeholder `_ = tarexport.Write` line), then:
 
 ```go
 // getTar streams a PAX tar of the directory tree rooted at the {key} path value.
@@ -1913,8 +1913,8 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/amberpack"
 	"bytes"
 )
 
@@ -2337,10 +2337,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // collectSequential builds the tree at dir with the sequential driver and returns
@@ -2684,7 +2684,7 @@ import (
 
 	"github.com/amber-store/amber-store/client"
 	"github.com/amber-store/amber-store/internal/socketpath"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2794,7 +2794,7 @@ import (
 
 	"github.com/amber-store/amber-store/client"
 	"github.com/amber-store/amber-store/internal/socketpath"
-	"github.com/amber-store/amber-store/tarextract"
+	"github.com/amber-store/core/tarextract"
 	"github.com/urfave/cli/v2"
 )
 
@@ -3024,8 +3024,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
 )
 
 func TestBuildDir_FailFastOnUnreadableFile(t *testing.T) {

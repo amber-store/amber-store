@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/amberpack"
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
 )
 
 func TestModeString(t *testing.T) {

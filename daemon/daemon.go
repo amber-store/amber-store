@@ -13,14 +13,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/gc"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/refstore"
 	"github.com/amber-store/amber-store/remotes"
-	"github.com/amber-store/amber-store/tarexport"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/gc"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
+	"github.com/amber-store/core/tarexport"
 	"golang.org/x/crypto/ssh"
 )
 

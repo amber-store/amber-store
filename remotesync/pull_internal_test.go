@@ -3,9 +3,9 @@ package remotesync
 import (
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 )
 
 // TestLocalMissingClassifiesPartialTree checks the completeness-gate walk:

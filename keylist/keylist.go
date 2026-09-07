@@ -7,7 +7,7 @@ package keylist
 import (
 	"fmt"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // Flatten concatenates keys in order.

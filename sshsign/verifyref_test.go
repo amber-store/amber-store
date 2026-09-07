@@ -1,17 +1,17 @@
-package reference_test
+package sshsign_test
 
 import (
 	"crypto/ed25519"
 	"crypto/rand"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
 	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
 	"golang.org/x/crypto/ssh"
 )
 
-func TestDecodeVerified(t *testing.T) {
+func TestDecodeVerifiedReference(t *testing.T) {
 	_, priv, err := ed25519.GenerateKey(rand.Reader)
 	if err != nil {
 		t.Fatal(err)
@@ -42,7 +42,7 @@ func TestDecodeVerified(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if _, err := reference.DecodeVerified(raw); err != nil {
+	if _, err := sshsign.DecodeVerifiedReference(raw); err != nil {
 		t.Fatal(err)
 	}
 
@@ -53,7 +53,7 @@ func TestDecodeVerified(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if _, err := reference.DecodeVerified(rawUnsigned); err == nil {
+		if _, err := sshsign.DecodeVerifiedReference(rawUnsigned); err == nil {
 			t.Fatal("unsigned record must be rejected")
 		}
 	})
@@ -65,7 +65,7 @@ func TestDecodeVerified(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		if _, err := reference.DecodeVerified(rawBad); err == nil {
+		if _, err := sshsign.DecodeVerifiedReference(rawBad); err == nil {
 			t.Fatal("tampered record must be rejected")
 		}
 	})

@@ -13,12 +13,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/amber-store/amber-store/amberignore"
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
 	"github.com/amber-store/amber-store/userconfig"
+	"github.com/amber-store/core/amberignore"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
 	"github.com/urfave/cli/v2"
 )
 

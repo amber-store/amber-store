@@ -20,13 +20,13 @@ import (
 	"time"
 
 	"github.com/amber-store/amber-store/allowlist"
-	"github.com/amber-store/amber-store/gc"
 	"github.com/amber-store/amber-store/grant"
 	"github.com/amber-store/amber-store/httpsig"
-	"github.com/amber-store/amber-store/inbox"
 	"github.com/amber-store/amber-store/nonces"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/gc"
+	"github.com/amber-store/core/inbox"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
 	"golang.org/x/crypto/ssh"
 )
 

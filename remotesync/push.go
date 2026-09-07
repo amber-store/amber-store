@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
 	"github.com/amber-store/amber-store/remoteclient"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 	"golang.org/x/sync/errgroup"
 )
 

@@ -14,11 +14,11 @@ import (
 
 	"github.com/amber-store/amber-store/allowlist"
 	"github.com/amber-store/amber-store/daemon"
-	"github.com/amber-store/amber-store/inbox"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/refstore"
 	"github.com/amber-store/amber-store/remotes"
 	"github.com/amber-store/amber-store/server"
+	"github.com/amber-store/core/inbox"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
 	"golang.org/x/crypto/ssh"
 )
 

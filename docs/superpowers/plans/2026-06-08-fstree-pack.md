@@ -245,7 +245,7 @@ git commit -m "feat(cborx): canonical bstr-keyed CBOR map for xattrs"
 // streaming. See architecture/types.md for the length-field semantics.
 package fstree
 
-import "github.com/amber-store/amber-store/key"
+import "github.com/amber-store/core/key"
 
 // Object is a built CAS object: its key and its serialized bytes.
 type Object struct {
@@ -287,7 +287,7 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/internal/cborx"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func mustBlob(t *testing.T, data []byte) Object {
@@ -436,7 +436,7 @@ import (
 	"fmt"
 
 	"github.com/amber-store/amber-store/internal/cborx"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"github.com/fxamacker/cbor/v2"
 )
 
@@ -889,8 +889,8 @@ package fstree
 import (
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 )
 
 // collector records emitted objects and is the test's Emit.
@@ -987,8 +987,8 @@ package fstree
 import (
 	"errors"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 )
 
 // IndexBuilder builds the index levels above a leaf level by streaming child
@@ -1163,8 +1163,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 )
 
 func TestDir_EmptyDirIsSingleEmptyLeaf(t *testing.T) {
@@ -1241,8 +1241,8 @@ Expected: FAIL — `undefined: NewDirBuilder`.
 package fstree
 
 import (
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 )
 
 // DirBuilder builds one directory's prolly tree by streaming its entries (which
@@ -1336,7 +1336,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 func mkKey(t *testing.T, tp key.Type, n int) key.Key {
@@ -1418,7 +1418,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // Sink writes objects to a tar archive with deduplication.
@@ -1720,8 +1720,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 )
 
 // readTar returns a map from member name (hex key) to its bytes, plus the
@@ -1870,10 +1870,10 @@ import (
 	"path/filepath"
 
 	"github.com/amber-store/amber-store/castar"
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/cborx"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	"golang.org/x/sys/unix"
 )
 
@@ -2137,7 +2137,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/amber-store/amber-store/chunkers"
+	"github.com/amber-store/core/chunkers"
 	"github.com/urfave/cli/v2"
 )
 
@@ -2260,8 +2260,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/key"
 	"github.com/fxamacker/cbor/v2"
 	"golang.org/x/sys/unix"
 )

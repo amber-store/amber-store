@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/amber-store/amber-store/client"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
 )
 
 func TestRefs_ClientRoundTrip(t *testing.T) {

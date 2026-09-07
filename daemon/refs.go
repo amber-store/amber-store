@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 // maxRefRecord bounds a PUT /v1/refs body: a record is a 1 KiB name plus a

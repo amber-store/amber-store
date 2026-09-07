@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/reference"
 	"github.com/amber-store/amber-store/remoteclient"
 	"github.com/amber-store/amber-store/sshsign"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/reference"
 	"golang.org/x/crypto/ssh"
 )
 

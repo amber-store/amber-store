@@ -34,9 +34,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/amber-store/amber-store/chunkers"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/chunkers"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 // memStore is an in-memory object store for builder-emitted objects.
@@ -197,7 +197,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // LookupEntry returns the entry called name in the directory object dir. It
@@ -281,8 +281,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
 )
 
 func TestListEntries_PagesMatchCollect(t *testing.T) {
@@ -425,7 +425,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 )
 
 // ListEntries returns up to limit entries of the directory object dir whose
@@ -722,11 +722,11 @@ import (
 
 	"github.com/amber-store/amber-store/admin"
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
+	"github.com/amber-store/core/fstree"
 	"github.com/amber-store/amber-store/internal/allowstore"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 )
 
 // memObjects is an in-memory admin.ObjectGetter.
@@ -848,8 +848,8 @@ Create `admin/browse.go`:
 package admin
 
 import (
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/refstore"
 )
 
 // ObjectGetter is the read-only object-store view the ref browser needs;
@@ -1012,7 +1012,7 @@ Expected: FAIL — `refs = 404, want 200` (route does not exist yet)
 
 - [ ] **Step 3: Write the implementation**
 
-Append to `admin/browse.go` (extend its imports with `"encoding/json"`, `"net/http"`, `"time"`, and `"github.com/amber-store/amber-store/reference"`):
+Append to `admin/browse.go` (extend its imports with `"encoding/json"`, `"net/http"`, `"time"`, and `"github.com/amber-store/core/reference"`):
 
 ```go
 // refKind classifies a parsed store key for the refs listing.
@@ -1102,7 +1102,7 @@ git commit -m "feat(admin): refs listing endpoint"
 
 - [ ] **Step 1: Write the failing test**
 
-Append to `admin/browse_test.go` (add `"net/url"` and `"github.com/amber-store/amber-store/chunkers"` to its imports):
+Append to `admin/browse_test.go` (add `"net/url"` and `"github.com/amber-store/core/chunkers"` to its imports):
 
 ```go
 type treeEntryJSON struct {
@@ -1277,10 +1277,10 @@ import (
 	"unicode/utf8"
 
 	"github.com/amber-store/amber-store/diskstore"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/reference"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/reference"
+	"github.com/amber-store/core/refstore"
 	"golang.org/x/sys/unix"
 )
 ```
@@ -1930,7 +1930,7 @@ Expected: FAIL — `archive = 404, want 200` (route does not exist yet)
 
 - [ ] **Step 3: Write the implementation**
 
-Append to `admin/browse.go` (extend its imports with `"compress/gzip"` and `"github.com/amber-store/amber-store/tarexport"`):
+Append to `admin/browse.go` (extend its imports with `"compress/gzip"` and `"github.com/amber-store/core/tarexport"`):
 
 ```go
 // archive streams the directory at ref+path as a tar (format=tar, the

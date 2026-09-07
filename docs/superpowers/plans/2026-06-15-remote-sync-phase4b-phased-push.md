@@ -48,9 +48,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 	"github.com/amber-store/amber-store/remoteclient"
 	"golang.org/x/sync/errgroup"
 )

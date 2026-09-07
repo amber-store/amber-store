@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/amber-store/amber-store/key"
+	"github.com/amber-store/core/key"
 	tea "github.com/charmbracelet/bubbletea"
 )
 

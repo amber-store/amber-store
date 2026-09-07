@@ -16,10 +16,10 @@ import (
 
 	"github.com/amber-store/amber-store/client"
 	"github.com/amber-store/amber-store/daemon"
-	"github.com/amber-store/amber-store/gc"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
-	"github.com/amber-store/amber-store/refstore"
+	"github.com/amber-store/core/gc"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
+	"github.com/amber-store/core/refstore"
 )
 
 // TestEndToEnd_IngestStreamThenRestore runs the full path: a daemon owns a store,

@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/amber-store/amber-store/amberpack"
-	"github.com/amber-store/amber-store/fstree"
-	"github.com/amber-store/amber-store/key"
-	"github.com/amber-store/amber-store/packstore"
 	"github.com/amber-store/amber-store/remotesync"
+	"github.com/amber-store/core/amberpack"
+	"github.com/amber-store/core/fstree"
+	"github.com/amber-store/core/key"
+	"github.com/amber-store/core/packstore"
 )
 
 func TestBatchesBalanceByBytes(t *testing.T) {
