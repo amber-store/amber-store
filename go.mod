@@ -3,7 +3,7 @@ module github.com/amber-store/amber-store
 go 1.26.3
 
 require (
-	github.com/amber-store/core v0.0.6
+	github.com/amber-store/core v0.0.7
 	github.com/charmbracelet/bubbles v1.0.0
 	github.com/charmbracelet/bubbletea v1.3.10
 	github.com/cockroachdb/pebble/v2 v2.1.6
